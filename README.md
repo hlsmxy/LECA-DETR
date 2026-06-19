@@ -1,7 +1,6 @@
-# LECA-DETR: Lightweight Real-Time Object Detection for UAV Edge Deployment
+# Local Context Enhancement for Lightweight Real-Time UAV Object Detection on Edge Devices
 
 ## Abstract
-## 摘要
 
 This repository contains the implementation of **LECA-DETR**, a lightweight real-time object detector for UAV edge deployment. LECA-DETR is built on the Ultralytics RT-DETR pipeline and focuses on reducing model complexity while preserving small-object detection accuracy in aerial scenes.
 
@@ -58,9 +57,6 @@ pip install ultralytics timm opencv-python numpy
 LECA-DETR is mainly evaluated on the VisDrone2019 object detection dataset. Please download the dataset from the official VisDrone website and convert or organize it into the YOLO/Ultralytics detection format.
 
 A typical dataset YAML can be configured as follows:
-典型的数据集YAML可以配置如下：
-典型的数据集YAML可以配置如下：
-典型的数据集YAML可以配置如下：
 
 ```yaml
 path: /path/to/VisDrone
@@ -89,7 +85,6 @@ model.train(data=r'VisDrone.yaml', imgsz=1024, epochs=400, batch=6)
 ### CODrone
 
 The paper also reports results on CODrone. Since CODrone annotations are rotated boxes, the experiments convert each four-point rotated box into the minimum enclosing horizontal bounding box and then export normalized YOLO-format labels.
-该论文还报道了CODrone的研究结果。由于CODrone注释是旋转框，实验将每个四点旋转框转换为最小包围水平边界框，然后导出归一化的YOLO格式标签。
 
 ## Project Structure
 
@@ -110,10 +105,8 @@ LECADETR/
 ### 1. Integrate Custom Modules
 
 Copy the custom modules into the Ultralytics environment or project where model YAML parsing can import them:
-将自定义模块复制到 Ultralytics 环境或项目中，在那里模型 YAML 解析可以导入它们：
 
 ```text
-“''文本
 Addmodules/GhostNetV2.py
 Addmodules/LECA.py
 ```
@@ -157,12 +150,10 @@ model.train(
 To train the GhostNetV2-only baseline, change the model YAML path:
 
 ```python
-“派森
 model = RTDETR('rtdetr-Ghostnet.yaml')
 ```
 
 To train LECA-DETR, use:
-训练LECA-DETR时，请使用：
 
 ```python
 model = RTDETR('rtdetr-GhostnetLECA.yaml')
@@ -170,7 +161,7 @@ model = RTDETR('rtdetr-GhostnetLECA.yaml')
 
 ## Core Algorithms
 
-### 1. GhostNetV2 Backbone  1. GhostNetV2骨干网
+### 1. GhostNetV2 Backbone
 
 GhostNetV2 is used to replace the default ResNet backbone in RT-DETR. It generates redundant feature maps through cheap operations and introduces lightweight Decoupled Fully Connected attention in deeper blocks.
 
@@ -180,14 +171,11 @@ In LECA-DETR, GhostNetV2 is used only as a multi-scale feature extractor. The de
 
 - Lightweight feature generation through Ghost modules
 - Lower parameter count and computational cost than ResNet50
-- 参数数量和计算成本低于ResNet50
 - Multi-scale outputs compatible with RT-DETR hybrid encoder and decoder
-- 兼容RT-DETR混合编码器和解码器的多尺度输出
 
 ### 2. Local-Enhanced Context Attention (LECA)
 
 LECA is a lightweight attention module designed for UAV small-object detection. It contains a spatial branch and a channel branch.
-LECA是一款轻量化的注意力模块，专为无人机小物体探测而设计。它包含一个空间分支和一个通道分支。
 
 **Spatial Branch:**
 
@@ -230,7 +218,7 @@ This design keeps:
 
 ### VisDrone2019 Results
 
-| Model   模型| Input Resolution   输入分辨率| mAP50 (%)   mAP50（%）| mAP50-95 (%) | Params (M) | GFLOPs |
+| Model | Input Resolution | mAP50 (%) | mAP50-95 (%) | Params (M) | GFLOPs |
 | --- | --- | ---: | ---: | ---: | ---: |
 | RT-DETR + ResNet50 | 1024 x 1024 | 51.19 | 31.70 | 41.96 | 125.7 |
 | RT-DETR + GhostNetV2 | 1024 x 1024 | 48.15 | 29.65 | 12.39 | 25.9 |
