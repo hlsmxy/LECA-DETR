@@ -247,6 +247,9 @@ Compared with the RT-DETR ResNet50 baseline, LECA-DETR reduces parameters by **7
 
 With TensorRT acceleration, LECA-DETR reaches **36.65 ms** latency and **27.3 FPS** on NVIDIA Jetson Orin NX.
 
+## Pretrained Models
+- [LECA-DETR VisDrone 1024](https://drive.google.com/file/d/1d-df_MC-WUMtcO-kutVka6_bFlptUm4y/view?usp=sharing)
+- [LECA-DETR CODrone 1024](https://drive.google.com/file/d/1iUknUaMXOD1tr2oAq0i8fYDxInxcM1GC/view?usp=sharing)
 ## Citation
 
 If this project is helpful for your research, please cite our paper:
