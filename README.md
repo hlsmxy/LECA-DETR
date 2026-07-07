@@ -81,7 +81,7 @@ Update the `data` path in `train.py` before training:
 ```python
 model.train(data=r'VisDrone.yaml', imgsz=1024, epochs=400, batch=6)
 ```
-
+[Dataset Download](https://github.com/VisDrone/VisDrone-Dataset)
 ### CODrone
 
 The paper also reports results on CODrone. Since CODrone annotations are rotated boxes, the experiments convert each four-point rotated box into the minimum enclosing horizontal bounding box and then export normalized YOLO-format labels.
@@ -99,7 +99,7 @@ LECADETR/
 |-- train.py                      # VisDrone training entry
 `-- README.md
 ```
-
+[Dataset Download](https://github.com/AHideoKuzeA/CODrone-A-Comprehensive-Oriented-Object-Detection-benchmark-for-UAV)
 ## Usage
 
 ### 1. Integrate Custom Modules
