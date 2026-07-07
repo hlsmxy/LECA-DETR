@@ -313,19 +313,19 @@ This design keeps:
 
 | Model | Input Resolution | mAP50 (%) | mAP50-95 (%) | Params (M) | GFLOPs |
 | --- | --- | ---: | ---: | ---: | ---: |
-| RT-DETR + ResNet50 | 1024 x 1024 | 51.19 | 31.70 | 41.96 | 125.7 |
-| RT-DETR + GhostNetV2 | 1024 x 1024 | 48.15 | 29.65 | 12.39 | 25.9 |
-| RT-DETR + GhostNetV2 + LECA | 1024 x 1024 | 50.55 | 31.81 | 12.40 | 26.0 |
+| RT-DETR + ResNet50 | 1024 x 1024 | 51.19 | 31.70 | 42.78 | 334.1 |
+| RT-DETR + GhostNetV2 | 1024 x 1024 | 48.15 | 29.65 | 12.60 | 69.3 |
+| RT-DETR + GhostNetV2 + LECA | 1024 x 1024 | 50.55 | 31.81 | 12.60 | 69.4 |
 
-Compared with the RT-DETR ResNet50 baseline, LECA-DETR reduces parameters by **70.4%** and GFLOPs by **79.3%**, while improving mAP50-95 by **0.11 percentage points**.
+Compared with the RT-DETR ResNet50 baseline, LECA-DETR reduces parameters by **70.5%** and GFLOPs by **79.2%**, while improving mAP50-95 by **0.11 percentage points**.
 
 ### CODrone Results
 
 | Model | Input Resolution | mAP50 (%) | mAP50-95 (%) | Params (M) | GFLOPs |
 | --- | --- | ---: | ---: | ---: | ---: |
-| RT-DETR + ResNet50 | 1024 x 1024 | 32.24 | 15.92 | 41.96 | 125.7 |
-| RT-DETR + GhostNetV2 | 1024 x 1024 | 35.41 | 18.81 | 12.39 | 25.9 |
-| RT-DETR + GhostNetV2 + LECA | 1024 x 1024 | 35.52 | 19.10 | 12.40 | 26.0 |
+| RT-DETR + ResNet50 | 1024 x 1024 | 32.24 | 15.92 | 42.72 | 334.1 |
+| RT-DETR + GhostNetV2 | 1024 x 1024 | 35.41 | 18.81 | 12.60 | 69.3 |
+| RT-DETR + GhostNetV2 + LECA | 1024 x 1024 | 35.52 | 19.10 | 12.60 | 69.4 |
 
 ### Jetson Orin NX Deployment
 
