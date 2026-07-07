@@ -145,7 +145,7 @@ model.train(data=r'VisDrone.yaml', imgsz=1024, epochs=400, batch=6)
 
 The paper also reports results on CODrone. Since CODrone annotations are rotated boxes, the experiments convert each four-point rotated box into the minimum enclosing horizontal bounding box and then export normalized YOLO-format labels.
 
-## Preparation
+#### Preparation
 
 CODrone annotations are provided as VOC-style rotated boxes. For the horizontal-box detection experiments, convert each four-point OBB annotation into its minimum enclosing horizontal bounding box and export normalized YOLO labels.
 
@@ -192,6 +192,7 @@ Update the `data` path in `train.py` before training:
 model.train(data=r'CODrone.yaml', imgsz=1024, epochs=400, batch=6)
 
 [Dataset Download](https://github.com/AHideoKuzeA/CODrone-A-Comprehensive-Oriented-Object-Detection-benchmark-for-UAV)
+
 ## Usage
 
 ### 1. Integrate Custom Modules
