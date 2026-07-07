@@ -190,7 +190,7 @@ Update the `data` path in `train.py` before training:
 
 ```python
 model.train(data=r'CODrone.yaml', imgsz=1024, epochs=400, batch=6)
-
+```
 [Dataset Download](https://github.com/AHideoKuzeA/CODrone-A-Comprehensive-Oriented-Object-Detection-benchmark-for-UAV)
 
 ## Usage
