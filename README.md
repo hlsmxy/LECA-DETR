@@ -266,4 +266,4 @@ We thank the following projects and datasets for supporting this research:
 - [RT-DETR](https://github.com/lyuwenyu/RT-DETR) for real-time end-to-end detection research
 - [GhostNetV2](https://github.com/huawei-noah/Efficient-AI-Backbones) for lightweight backbone design
 - [VisDrone](https://github.com/VisDrone/VisDrone-Dataset) for UAV object detection benchmarks
-- The computer vision community for valuable open-source research
+- [CODrone](https://github.com/AHideoKuzeA/CODrone-A-Comprehensive-Oriented-Object-Detection-benchmark-for-UAV) for UAV object detection benchmarks
